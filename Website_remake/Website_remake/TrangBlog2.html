@@ -1,12 +1,12 @@
+
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--icon logo trên tiêu đề-->
-    <title>Wasabi</title>
+    <title>Blog</title>
+    <!--favicon-->
     <link rel="shortcut icon" href="logo/logo-tron.png" />
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,151 +17,24 @@
     <!-- app css -->
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/app.css">
-    <style type="text/css">
-        /*Slider*/
-        .mySlides {
-            display: none;
-            height: 100%;
-        }
-
-            .mySlides img {
-                height: 100%;
-                width: 100%;
-                object-fit: fill;
-            }
+    <style>
 
 
-        .slideshow-container {
-            max-width: 100%;
-            max-height: 100%;
-            position: relative;
-            margin: unset;
-            height: 100%;
-        }
-
-        img {
-            vertical-align: middle;
-        }
-
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bolder;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 5px 5px 0;
-            user-select: none;
-        }
-
-        .next {
-            right: 0;
-            border-radius: 5px 0 0 5px;
-        }
-
-
-            /* On hover, add a black background color with a little bit see-through */
-            .prev:hover, .next:hover {
-                background-color: rgba(0,0,0,0.8);
-            }
-
-
-        /* Number text (1/3 etc) */
-        .numbertext {
-            color: #f2f2f2;
-            font-size: 12px;
-            padding: 8px 12px;
-            position: absolute;
-            top: 0;
-        }
-        /* On smaller screens, decrease text size */
-        @media only screen and (max-width: 300px) {
-            .prev, .next {
-                font-size: 11px
-            }
-        }
-        /*end slider*/
-        .slider-margin {
-            margin-top: 20px;
-        }
-
-        .image img {
-            width: 100%;
-            height: 100%;
-        }
-
-        /*btn*/
         .btn-xemthem {
             display: inline-block;
-            border: 2px solid black;
-            background-color: black;
-            color: white;
-            padding: 15px 35px;
+            border: 1px solid black;
+            background-color: white;
+            color: black;
+            padding: 10px 35px;
             margin-top: 10px;
             font-size: 16px;
             outline: 0;
             font-weight: 600;
             width: 180px;
-            height: 50px;
-            border-radius: 50px;
+            height: 40px;
             text-transform: uppercase;
         }
 
-        .btn-view {
-            display: inline-block;
-            border: 2px solid #C18989;
-            background-color: #C18989;
-            padding: 15px 35px;
-            font-size: 15px;
-            outline: 0;
-            font-weight: 600;
-            border-radius: 50px;
-        }
-
-
-
-        .btn-flat {
-            display: inline-block;
-            border: 2px solid black;
-            background-color: black;
-            color: white;
-            padding: 15px 35px;
-            font-size: 15px;
-            outline: 0;
-            font-weight: 600;
-            border-radius: 50px;
-            text-transform: uppercase;
-        }
-
-        .btn-flat-like {
-            display: inline-block;
-            border: 2px solid #C18989;
-            background-color: #C18989;
-            color: white;
-            margin-left: 20px;
-            font-size: 15px;
-            outline: 0;
-            font-weight: 600;
-            border-radius: 50px;
-            text-transform: uppercase;
-        }
-
-        .btn-flat-now {
-            display: inline-block;
-            border: 2px solid var(--red);
-            background-color: var(--red);
-            color: white;
-            padding: 15px 35px;
-            font-size: 15px;
-            outline: 0;
-            font-weight: 600;
-            border-radius: 50px;
-            text-transform: uppercase;
-        }
 
         .btn-hover {
             transition: all 0.3s ease-in-out;
@@ -169,55 +42,43 @@
 
             .btn-hover:hover {
                 background-color: white;
-                color: black;
-            }
-
-        .btn-like-hover {
-            transition: all 0.3s ease-in-out;
-        }
-
-            .btn-like-hover:hover {
-                background-color: white;
-                color: var(--second-bg-color);
-            }
-
-        .btn-bag-hover {
-            transition: all 0.3s ease-in-out;
-        }
-
-            .btn-bag-hover:hover {
-                background-color: white;
                 color: var(--red);
             }
 
-
-        /*Đề mục vd: Honey deal*/
-        .section-header {
-            font-size: 30px;
-            color: black;
-            padding: 15px 0;
+        .filter-quick {
+            height: 40px;
+            background-color: #fff;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0;
+            transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+            z-index: 2;
+            font-size: 16px;
+            font-family: Quicksand;
+            margin-right: 10px
         }
-        /*Thẻ thông tin sp*/
+
         .product-card {
-            background-color: transparent;
+            background-color: white;
             transition: all 0.3s ease-in-out;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            margin-bottom: 30px
         }
 
             .product-card:hover {
-                background-color: ThreeDHighlight;
-                box-shadow: var(--second-bg-color) 0px 5px 20px 0;
-                transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+                background-color: black;
+                color: white
             }
 
         .product-card-img {
-            height: 300px;
+            width: 100%;
             overflow: hidden;
             display: flex;
             justify-content: center;
         }
 
             .product-card-img img {
-                max-height: 300px;
+                width: 100%;
+                max-height: 100%;
                 transition: all 0.3s ease-in-out;
             }
 
@@ -231,7 +92,6 @@
 
         .product-card:hover .product-card-img img:nth-child(2) {
             display: block;
-            transition: all 0.3s ease-in-out;
         }
 
         .product-card-info {
@@ -280,33 +140,101 @@
             margin-left: 5px;
         }
 
-        .btn-shop-now,
-        .btn-cart-add {
-            font-size: 15px;
-            padding: 5px 10px;
-            line-height: 15px;
+
+        .breadcumb {
+            font-weight: bold;
+            padding: 10px;
+            font-size: 14px
         }
 
-        .sp-item-name {
-            font-size: 55px;
-            font-weight: 600;
-            margin-bottom: 30px;
+            .breadcumb a {
+                text-transform: capitalize;
+            }
+
+                .breadcumb a:hover {
+                    color: var(--red);
+                }
+
+            .breadcumb span {
+                margin: 0 10px;
+            }
+
+
+
+        .product-related {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .sp-item-description {
-            margin-bottom: 60px;
-            width: 500px;
-            text-align: justify;
+        .product-img-related {
+            width: 450px;
+            cursor: pointer;
+            margin: 0 50px 50px 50px;
+            grid-auto-rows: auto;
+            background-color: white;
+            border-radius: 0px 0px 20px 20px;
+            box-shadow: var(--second-bg-color) 0px 7px 29px 0;
+            transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
         }
 
-        .blogs-description {
-            margin: 15px;
-            flex: 3;
+        .product-img-hover {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .product-img-related:hover {
+            background-color: black;
+            color: white
+        }
+
+        .product-name {
             font-size: 20px;
-            text-align: justify
+            text-align: center;
+            font-weight: bold;
+            text-transform: capitalize;
+            margin: 10px 10px 10px 10px;
+        }
+
+        .product-price {
+            font-size: 16px;
+            text-align: left;
+            font-weight: 300;
+            text-transform: none;
+            margin: 0 10px 20px 10px;
+        }
+
+        .pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .pagination > li > a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 35px;
+                height: 35px;
+                margin-left: 5px;
+                font-size: 20px;
+            }
+
+                .pagination > li > a.active {
+                    background-color: var(--black);
+                    color: white;
+                }
+
+                .pagination > li > a:hover {
+                    border: 2px solid var(--black);
+                }
+
+        .news {
+            padding: 0 30px;
+            margin-bottom: 30px
         }
     </style>
 </head>
+
 <body>
     <!-- header -->
     <header>
@@ -356,7 +284,7 @@
                     </div>
                     <ul class="user-menu">
                         <li class="dropdown">
-                            <a href="" onclick="location.assign('TrangTaiKhoanCaNhan.html')">Tài khoản</a>
+                            <a href="">Tài khoản</a>
                             <i class='bx bxs-chevron-down'></i>
                             <ul class="dropdown-content">
                                 <li><a href="DangNhap.html">Đăng nhập </a></li>
@@ -404,9 +332,9 @@
                                         <div class="box">
                                             <h3><a href="1-TrangDiem.html">Trang điểm</a></h3>
                                             <ul>
-                                                <li><a href="TrangSanPham.html">Trang điểm mặt</a></li>
-                                                <li><a href="TrangSanPham.html">Trang điểm môi</a></li>
-                                                <li><a href="TrangSanPham.html">Trang điểm mắt</a></li>
+                                                <li><a href="1-1-TrangDiemDaMat.html">Trang điểm mặt</a></li>
+                                                <li><a href="1-2-TrangDiemMoi.html">Trang điểm môi</a></li>
+                                                <li><a href="1-3-TrangDiemMat.html">Trang điểm mắt</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -414,10 +342,10 @@
                                         <div class="box">
                                             <h3><a href="2-ChamSocDaMat.html">Chăm sóc da mặt</a></h3>
                                             <ul>
-                                                <li><a href="TrangSanPham.html">Kem dưỡng, serum</a></li>
-                                                <li><a href="TrangSanPham.html">Sữa rửa mặt</a></li>
-                                                <li><a href="TrangSanPham.html">Tẩy tế bào</a></li>
-                                                <li><a href="TrangSanPham.html">Mặt nạ</a></li>
+                                                <li><a href="2-1-KemDuong-Serum.html">Kem dưỡng, serum</a></li>
+                                                <li><a href="2-2-SuaRuaMat.html">Sữa rửa mặt</a></li>
+                                                <li><a href="2-3-TayTeBao.html">Tẩy tế bào</a></li>
+                                                <li><a href="2-4-MatNa.html">Mặt nạ</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -425,10 +353,10 @@
                                         <div class="box">
                                             <h3><a href="3-ChamSocMat.html">Chăm sóc mắt</a></h3>
                                             <ul>
-                                                <li><a href="TrangSanPham.html">Kem dưỡng da</a></li>
-                                                <li><a href="TrangSanPham.html">Sữa rửa mặt</a></li>
-                                                <li><a href="TrangSanPham.html">Tẩy tế bào</a></li>
-                                                <li><a href="TrangSanPham.html">Mặt nạ mắt </a></li>
+                                                <li><a href="3-1KemDuongDa.html">Kem dưỡng da</a></li>
+                                                <li><a href="3-2-SuaRuaMat.html">Sữa rửa mặt</a></li>
+                                                <li><a href="3-3-TayTeBao.html">Tẩy tế bào</a></li>
+                                                <li><a href="3-4-MatNaMat.html">Mặt nạ mắt </a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -436,9 +364,9 @@
                                         <div class="box">
                                             <h3><a href="4-Combo.html">Combo</a></h3>
                                             <ul>
-                                                <li><a href="TrangSanPham.html">Combo trang điểm</a></li>
-                                                <li><a href="TrangSanPham.html">Combo da mặt</a></li>
-                                                <li><a href="TrangSanPham.html">Combo cho mắt</a></li>
+                                                <li><a href="4-1-ComboTrangDiem.html">Combo trang điểm</a></li>
+                                                <li><a href="4-2-ComboDaMat.html">Combo da mặt</a></li>
+                                                <li><a href="4-3-ComboVungMat.html">Combo cho mắt</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -457,249 +385,147 @@
         <!-- end main header -->
     </header>
     <!-- end header -->
-    <!--content-->
-    <div class="container slider-margin">
+    <!-- blog content -->
+    <div class="bg-main">
+        <!-- đường dẫn -->
+        <div class="breadcumb" style="border-bottom: 0.5px dotted ">
+            <a href="index.html">Trang chủ</a>
+            <span><img src="icons/right.png" width="10" height="10" /></span>
+            <a href="">Blog</a>
+        </div>
+        <!-- 2 cột -->
         <div class="row">
-            <div class="col-12">
-                <div class="slideshow-container">
-                    <div class="mySlides ">
-                        <div class="numbertext">
-                            1/3
+            <!-- cột 2:banner, thanh lọc nhanh, sản phẩm -->
+            <div style=" width: 100% ">
+                <!-- thanh lọc nhanh -->
+                <div class="box bg-main">
+                    <!--Chia làm 2 cột-->
+                    <div class="row bg-second">
+                        <!--Cột 1-->
+                        <div>
+                            <ul>
+                                <li style="padding-top: 8px; margin: 0 15px 0 5px">
+                                    <a> | Sắp sếp theo:</a>
+                                </li>
+                            </ul>
                         </div>
-                        <img src="images/4-banner-1-15.jpg">
-                    </div>
-                    <div class="mySlides ">
-                        <div class="numbertext">
-                            2/3
+                        <!--Cột 2-->
+                        <div>
+                            <form action="">
+                                <select name="filter-quick" class="filter-quick">
+                                    <option value="Từ A-Z">Mới nhất</option>
+                                    <option value="Từ Z-A">Cũ nhất</option>
+                                    <option value="Giá tăng dần">Xem nhiều nhất</option>
+                                </select>
+                            </form>
                         </div>
-                        <img src="images/1425x400INNISFREE-15-11.jpg">
                     </div>
-                    <div class="mySlides ">
-                        <div class="numbertext">
-                            3/3
+                </div>
+                <!--bài viết-->
+                <div class="row" style="padding: 30px; margin: 10px">
+                    <!--bài viết 1-->
+                    <div class="col-6 col-md-6 col-sm-12 news">
+                        <div class="product-card">
+                            <div class="product-card-img">
+                                <img src="./images/blog7.jpg" alt="">
+                                <img src="./images/blog7.jpg" alt="">
+                            </div>
+                            <div class="product-card-info">
+                                <div class="product-btn">
+                                    <button class="btn-xemthem btn-hover" onclick="location.assign('TrangChiTietBlog.html')">Xem thêm</button>
+                                </div>
+                            </div>
+                            <p class="product-name"> LIỆU TRÌNH THƯ GIÃN CƠ THỂ CHO DÂN VĂN PHÒNG CÙNG OKAME</p>
+                            <!--des-->
+                            <div class="product-price" style="margin-bottom: 10px">
+                                <p class="product-price-origin">
+                                    Hãy cùng Louis khám phá nhé! Sữa tắm OKAME Skin Replenishing Body Shower Nếu bạn là tín đồ trung thành với các sản phẩm sữa tắm có cảm vị tự nhiên th...
+                                </p>
+                            </div>
                         </div>
-                        <img src="images/1424x400ETUDEHOUSE-15-11.jpg">
+
                     </div>
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <!--bài viết 2-->
+                    <div class="col-6 col-md-6 col-sm-12 news">
+                        <div class="product-card">
+                            <div class="product-card-img">
+                                <img src="./images/blog8.jpg" alt="">
+                                <img src="./images/blog8.jpg" alt="">
+                            </div>
+                            <div class="product-card-info">
+                                <div class="product-btn">
+                                    <button class="btn-xemthem btn-hover" onclick="location.assign('TrangChiTietBlog.html')">Xem thêm</button>
+                                </div>
+                            </div>
+                            <p class="product-name">- HUXLEY - <br /> HIỆN TƯỢNG MỚI CỦA GIỚI MỸ PHẨM</p>
+                            <!--des-->
+                            <div class="product-price">
+                                <p class="product-price-origin">
+                                    Hãy cùng Louis khám phá nhé! Sữa tắm OKAME Skin Replenishing Body Shower Nếu bạn là tín đồ trung thành với các sản phẩm sữa tắm có cảm vị tự nhiên th...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--bài viết 3-->
+                    <div class="col-6 col-md-6 col-sm-12 news">
+                        <div class="product-card">
+                            <div class="product-card-img">
+                                <img src="./images/blog1.jpg" alt="">
+                                <img src="./images/blog1.jpg" alt="">
+                            </div>
+                            <div class="product-card-info">
+                                <div class="product-btn">
+                                    <button class="btn-xemthem btn-hover" onclick="location.assign('TrangChiTietBlog.html')">Xem thêm</button>
+                                </div>
+                            </div>
+                            <p class="product-name"> LIỆU TRÌNH THƯ GIÃN CƠ THỂ CHO DÂN VĂN PHÒNG CÙNG OKAME</p>
+                            <!--des-->
+                            <div class="product-price">
+                                <p class="product-price-origin">
+                                    Hãy cùng Louis khám phá nhé! Sữa tắm OKAME Skin Replenishing Body Shower Nếu bạn là tín đồ trung thành với các sản phẩm sữa tắm có cảm vị tự nhiên th...
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--bài viết 4-->
+                    <div class="col-6 col-md-6 col-sm-12 news">
+                        <div class="product-card">
+                            <div class="product-card-img">
+                                <img src="./images/blog2.jpg" alt="">
+                                <img src="./images/blog2.jpg" alt="">
+                            </div>
+                            <div class="product-card-info">
+                                <div class="product-btn">
+                                    <button class="btn-xemthem btn-hover" onclick="location.assign('TrangChiTietBlog.html')">Xem thêm</button>
+                                </div>
+                            </div>
+                            <p class="product-name">- HUXLEY - <br /> HIỆN TƯỢNG MỚI CỦA GIỚI MỸ PHẨM</p>
+                            <!--des-->
+                            <div class="product-price">
+                                <p class="product-price-origin">
+                                    Hãy cùng Louis khám phá nhé! Sữa tắm OKAME Skin Replenishing Body Shower Nếu bạn là tín đồ trung thành với các sản phẩm sữa tắm có cảm vị tự nhiên th...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <br>
-                <div style="text-align: center;">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
+                <!-- chuyển trang -->
+                <div class="box">
+                    <div class="box">
+                        <ul class="pagination" align="center">
+                            <li><a href="TrangBlog1.html"><img src="icons/left.png" /></a></li>
+                            <li><a href="TrangBlog1.html">1</a></li>
+                            <li><a href="#" class="active">2</a></li>
+                            <li><a href="#"><img src="icons/right.png" /></a></li>
+                        </ul>
+                    </div>
                 </div>
+                <!-- hết chuyển trang -->
             </div>
         </div>
     </div>
-    <!--Honey deal-->
-    <div style="background-color: #C18989; text-align:center;padding: 0.5px; margin-bottom: 20px; margin-top: 20px;">
-        <h2 class="section-header">Honey deals - Giá rẻ mỗi ngày</h2>
-    </div>
-    <div class="row" style="padding: 20px">
-        <!--sp 1-->
-        <div class="col-3 col-md-6 col-sm-12">
-            <div class="product-card">
-                <div class="product-card-img">
-                    <img src="./images/spdeal1-1.png" alt="">
-                    <img src="./images/spdeal1-2.png" alt="">
-                </div>
-                <div class="product-card-info">
-                    <div class="product-btn">
-                        <button class="btn-flat-now btn-bag-hover btn-cart-add">
-                            <i class='bx bxs-shopping-bag'></i>
-                        </button>
-                        <button class="btn-flat-like btn-like-hover btn-cart-add">
-                            <i class='bx bxs-heart'></i>
-                        </button>
-                        <a href="TrangSanPhamChiTiet.html" class="btn-flat btn-hover btn-shop-now">chi tiết</a>
-                    </div>
-                    <div class="product-card-name">
-                        Dung dịch chấm mụn...
-                    </div>
-                    <div class="product-card-price">
-                        <div class="curr-price">250,000đ</div>
-                        <del>300,000đ</del>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--sp 2-->
-        <div class="col-3 col-md-6 col-sm-12">
-            <div class="product-card">
-                <div class="product-card-img">
-                    <img src="./images/spdeal2-1.png" alt="">
-                    <img src="./images/spdeal2-2.png" alt="">
-                </div>
-                <div class="product-card-info">
-                    <div class="product-btn">
-                        <button class="btn-flat-now btn-bag-hover btn-cart-add">
-                            <i class='bx bxs-shopping-bag'></i>
-                        </button>
-                        <button class="btn-flat-like btn-like-hover btn-cart-add">
-                            <i class='bx bxs-heart'></i>
-                        </button>
-                        <a href="TrangSanPhamChiTiet.html" class="btn-flat btn-hover btn-shop-now">chi tiết</a>
-                    </div>
-                    <div class="product-card-name">
-                        Son Kem Hera Sens...
-                    </div>
-                    <div class="product-card-price">
-                        <div class="curr-price">450,000đ</div>
-                        <del>480.000đ</del>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--sp 3-->
-        <div class="col-3 col-md-6 col-sm-12">
-            <div class="product-card">
-                <div class="product-card-img">
-                    <img src="./images/spdeal3-1.png" alt="">
-                    <img src="./images/spdeal3-2.png" alt="">
-                </div>
-                <div class="product-card-info">
-                    <div class="product-btn">
-                        <button class="btn-flat-now btn-bag-hover btn-cart-add">
-                            <i class='bx bxs-shopping-bag'></i>
-                        </button>
-                        <button class="btn-flat-like btn-like-hover btn-cart-add">
-                            <i class='bx bxs-heart'></i>
-                        </button>
-                        <a href="TrangSanPhamChiTiet.html" class="btn-flat btn-hover btn-shop-now">chi tiết</a>
-                    </div>
-                    <div class="product-card-name">
-                        Gel Rửa Tay Thành...
-                    </div>
-                    <div class="product-card-price">
-                        <div class="curr-price">89,000đ</div>
-                        <del>120,000đ</del>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--sp 4-->
-        <div class="col-3 col-md-6 col-sm-12">
-            <div class="product-card">
-                <div class="product-card-img">
-                    <img src="./images/spdeal4-2.png" alt="">
-                    <img src="./images/spdeal4-1.png" alt="">
-                </div>
-                <div class="product-card-info">
-                    <div class="product-btn">
-                        <button class="btn-flat-now btn-bag-hover btn-cart-add">
-                            <i class='bx bxs-shopping-bag'></i>
-                        </button>
-                        <button class="btn-flat-like btn-like-hover btn-cart-add">
-                            <i class='bx bxs-heart'></i>
-                        </button>
-                        <a href="TrangSanPhamChiTiet.html" class="btn-flat btn-hover btn-shop-now">chi tiết</a>
-                    </div>
-                    <div class="product-card-name">
-                        Serum Lót Laneige...
-                    </div>
-                    <div class="product-card-price">
-                        <div class="curr-price">79,000đ</div>
-                        <del>90,000đ</del>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div style="text-align:center; margin-top: 20px; ">
-        <button align="center" class="btn-xemthem btn-hover"
-                onclick="location.assign('TrangKhuyenMai.html')">Xem thêm</button>
-    </div>
-
-    <!--Bộ sưu tập-->
-    <div style="background-color: #C18989; text-align:center;padding: 0.5px; margin-bottom: 20px; margin-top: 20px;">
-        <h2 class="section-header">Bộ sưu tập</h2>
-    </div>
-    <div class="row" style="margin-left:20px; margin-right: 20px; margin-bottom: 0px; ">
-        <div class="col-6 col-md-6 col-sm-12">
-            <div class="product-card">
-                <div class="product-card-img">
-                    <img src="./images/COLLECTION1.png" alt="">
-                    <img src="./images/COLLECTION1.png" alt="">
-                </div>
-                <div class="product-card-info">
-                    <div class="product-btn">
-                        <button align="center" class="btn-xemthem btn-hover"
-                                onclick="location.assign('4-Combo.html')">Xem thêm</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--sp 2-->
-        <div class="col-6 col-md-6 col-sm-12">
-            <div class="product-card">
-                <div class="product-card-img">
-                    <img src="./images/COLLECTION2.png" alt="">
-                    <img src="./images/COLLECTION2.png" alt="">
-                </div>
-                <div class="product-card-info">
-                    <div class="product-btn">
-                        <button align="center" class="btn-xemthem btn-hover"
-                                onclick="location.assign('4-Combo.html')">Xem thêm</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--SP nổi bật-->
-    <div style="background-color: #C18989; text-align:center;padding: 0.5px; margin-bottom: 20px; margin-top: 20px;">
-        <h2 class="section-header">Sản phẩm nổi bật</h2>
-    </div>
-    <div class="box">
-        <div class="row" id="best-product"></div>
-    </div>
-    <div style="text-align:center; margin-top: 20px">
-        <button align="center" class="btn-xemthem btn-hover"
-                onclick="location.assign('TrangSanPham.html')">Xem thêm</button>
-    </div>
-
-    <!--BLOG-->
-    <div class="col-12 col-md-12"
-         style="background-color: #C18989; text-align:center;padding: 0.5px; margin-bottom: 20px;font-size: 30px;margin-top: 20px;">
-        <h2 class="section-header">Wasabi Blogs</h2>
-    </div>
-
-    <div class="row" style="padding: 30px;">
-        <div class="col-6 col-md-12">
-            <img style="padding: 20px" src="images/blog11.jpg" />
-        </div>
-        <div class="col-6 col-md-12">
-            <p class="blogs-description" style="padding: 20px">
-                REVIEW Gel Khoá Màu Son Romand Lip Matter 8g
-                Đây là sản phẩm khóa màu son và hóa phép bất kì loại son thành son lì mà mình rất thích. Mình sẽ review đến cả
-                nhà
-                sản phẩm này ngay dưới đây. Sản phẩm có 4 ưu điểm nổi bật. Hóa phép tất cả các loại son thành son lì, khóa màu
-                son, làm kem lót che khuyết điểm môi và giữ ẩm cho mội.
-            </p>
-            <button align="center" style="margin-left: 35px" class="btn-xemthem btn-hover"
-                    onclick="location.assign('TrangChiTietBlog.html')">Xem thêm</button>
-        </div>
-
-    </div>
-    <div class="row" style="flex-direction: row-reverse; padding: 30px; ">
-        <div class="col-6 col-md-12">
-            <img style="padding: 20px" src="images/blog4.jpg" />
-
-        </div>
-        <div class="col-6 col-md-12">
-            <p class="blogs-description" style="padding: 20px">
-                REVIEW Gel Khoá Màu Son Romand Lip Matter 8g
-                Đây là sản phẩm khóa màu son và hóa phép bất kì loại son thành son lì mà mình rất thích. Mình sẽ review đến cả
-                nhà
-                sản phẩm này ngay dưới đây. Sản phẩm có 4 ưu điểm nổi bật. Hóa phép tất cả các loại son thành son lì, khóa màu
-                son, làm kem lót che khuyết điểm môi và giữ ẩm cho mội.
-            </p>
-            <button align="center" style="margin-left: 35px" class="btn-xemthem btn-hover"
-                    onclick="location.assign('TrangChiTietBlog.html')">Xem thêm</button>
-        </div>
-
-    </div>
+    <!-- end products content -->
     <!-- footer -->
     <footer class="bg-second">
         <div class="container">
@@ -713,7 +539,6 @@
                             <a href="#"><i class='bx bx-current-location'>&nbsp;</i>Hồ Chí Minh, Vietnam</a>
                         </li>
                         <li><a href="#"><i class='bx bx-phone-call'>&nbsp;</i>0123456789</a></li>
-                        <li><a href="#"><i class='bx bx-check'>&nbsp;</i>(miễn phí 24/7)</a></li>
                         <li><a href="#"><i class='bx bx-mail-send'>&nbsp;</i>wasabi@gmail.com</a></li>
                     </ul>
 
@@ -744,7 +569,6 @@
                         <h3 class="contact-header">
                             <img src="logo/logo-tron.png" height="100" style="opacity: 0.9" />
                         </h3>
-                        <p align="center" style="margin-bottom: 10px"><b>Social Media</b></p>
                         <ul class="contact-socials">
                             <li>
                                 <a class="facebook" href="https://www.facebook.com/" target="_blank">
@@ -787,38 +611,7 @@
     </footer>
     <!-- end footer -->
     <!-- app js -->
-    <script src="/js/app.js"></script>
-    <script src="js/best-product.js"></script>
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += "active";
-            setTimeout(showSlides, 1000);
-
-        }
-
-    </script>
+    <script src="./js/app.js"></script>
 </body>
+
 </html>

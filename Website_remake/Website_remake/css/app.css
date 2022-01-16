@@ -2,8 +2,6 @@
     --main-bg-color: #eab9b9;
     --second-bg-color: #C18989;
     --third-bg-color: #e3e3e3;
-    --grey: #4b4b4b;
-    --black: #000;
     --red: #c0392b;
     --top-header-size: 30px;
     --mid-header-size: 60px;
@@ -641,20 +639,25 @@ menu {
             padding: 10px 0;
             font-size: 20px
         }
-
+        .main-menu > li:hover {
+            border-bottom: var(--red);
+            color: white;
+            transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        }
     .mega-dropdown > a > i {
         display: block;
     }
 
     .mega-content {
-        display: block;
-        position: relative;
-        opacity: 1;
-        visibility: visible;
-        box-shadow: unset;
-        background-color: transparent;
-        padding-left: 45px;
-        padding: 5px 0;
+        display: flex;
+        visibility: hidden
+    }
+    .mega-content:hover {
+        visibility: visible
+    }
+
+    .dropdown-content-notice {
+        display: none;
     }
 
 
